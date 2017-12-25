@@ -74,7 +74,7 @@ def main():
     )
 
     mkeys.connect('g-signal', handle_dbus_signal)
-    GLib.io_add_watch(sys.stdin.buffer, GLib.PRIORITY_HIGH, GLib.IOCondition.IN, handle_message)
+    GLib.io_add_watch(sys.stdin, GLib.PRIORITY_DEFAULT, GLib.IO_IN | GLib.IO_HUP, handle_message)
     main_loop = GLib.MainLoop()
 
     _log.info('Starting main loop')
