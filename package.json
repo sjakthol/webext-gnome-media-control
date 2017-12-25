@@ -1,0 +1,43 @@
+{
+  "name": "gnome-media-control",
+  "version": "0.0.1",
+  "description": "An addon that allows you to control media playback using Gnome Media Keys",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:prod": "webpack --define process.env.NODE_ENV=\"'production'\"",
+    "build:watch": "webpack --watch",
+    "lint": "npm run lint:standard && npm run lint:webext",
+    "lint:standard": "standard",
+    "lint:webext": "web-ext -s add-on lint",
+    "start": "web-ext --verbose -s add-on run"
+  },
+  "keywords": [
+    "extension",
+    "webext",
+    "firefox",
+    "gnome",
+    "media",
+    "playback",
+    "play",
+    "pause",
+    "control"
+  ],
+  "author": "Sami Jaktholm <sjakthol@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "web-ext": "^2.0.0",
+    "webpack": "^3.5.4"
+  },
+  "standard": {
+    "ignore": [
+      "add-on/background.js",
+      "add-on/content.js"
+    ],
+    "globals": [
+      "browser"
+    ]
+  },
+  "dependencies": {}
+}

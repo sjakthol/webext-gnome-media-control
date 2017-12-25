@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Gnome Media Control",
+  "version": "0.0.1",
+  "description": "Control the playback of video and audio tracks in web pages using the Media Keys of your keyboard",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "applications": {
+    "gecko": {
+      "id": "gnome-media-control@sjakthol.github.io",
+      "strict_min_version": "52.0"
+    }
+  },
+  "permissions": [
+    "nativeMessaging"
+  ]
+}

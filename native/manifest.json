@@ -1,0 +1,7 @@
+{
+  "name": "gnome_media_control",
+  "description": "Native component for grabbing GNOME media keys",
+  "path": "@APP_PATH@",
+  "type": "stdio",
+  "allowed_extensions": [ "gnome-media-control@sjakthol.github.io" ]
+}
