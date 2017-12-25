@@ -210,7 +210,7 @@ function init() {
 
   // If we inload, tell the parent to unregister all elements
   window.addEventListener('unload', ev => {
-    for (let id in trackedElements) {
+    for (let id of trackedElements.keys()) {
       browser.runtime.sendMessage({
         action: constants.ACTION_REMOVED,
         element: id

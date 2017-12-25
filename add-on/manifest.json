@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Gnome Media Control",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Control the playback of video and audio tracks in web pages using the Media Keys of your keyboard",
   "content_scripts": [
     {
